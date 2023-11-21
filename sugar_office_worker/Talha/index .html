@@ -100,12 +100,7 @@
           <div class="relative dropdown">
             <button class="flex group flex-col items-start text-left font-semibold focus:outline-none">
               <div class="flex items-center">
-                <svg class="w-8 h-8 text-pink-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                  <!-- Account icon SVG path -->
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                </svg>
+                <i class="fa-regular fa-user fa-2x mr-2 mb-1" style="color: #e650b4;"></i>
                 <span>Account</span>
               </div>
               <span class="text-xs text-gray-500">Login / Register</span>
@@ -120,13 +115,7 @@
           <div class="relative group">
             <button class="flex flex-col items-start text-left font-semibold focus:outline-none relative">
               <div class="flex items-center relative">
-                <svg class="w-8 h-8 text-pink-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <!-- Classic full heart icon SVG path -->
-                  <path fill-rule="evenodd"
-                    d="M3.172 2.172a4 4 0 015.656 0L10 3.343l1.172-1.171a4 4 0 115.656 5.656l-1.172 1.172a49.05 49.05 0 01-1.414 1.414L10 14.657l-4.242-4.242a49.05 49.05 0 01-1.414-1.414L3.172 7.828a4 4 0 010-5.656z"
-                    clip-rule="evenodd" />
-                </svg>
+                <i class="fa-solid fa-heart fa-2x mr-2 mb-1" style="color: #e650b4;"></i>
                 <span>Wishlist</span>
                 <!-- Badge for notifications -->
                 <span
@@ -140,12 +129,7 @@
           <div class="relative group">
             <button class="flex flex-col items-start text-left font-semibold focus:outline-none">
               <div class="flex items-center relative">
-                <svg class="w-8 h-8 text-gray-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 24 24" stroke="currentColor">
-                  <!-- Scale icon SVG path -->
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 4a2 2 0 012-2h14a2 2 0 012 2v1H3V4zm2 3h14v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7zm6 3l3 3m0 0l-3 3m3-3H9" />
-                </svg>
+                <i class="fa-solid fa-code-compare fa-2x mr-2 mb-1" style="color: #e650b4;"></i>
                 <span>Compare</span>
                 <span
                   class="absolute -top-5 left-6 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-pink-100 bg-pink-500 rounded-full">5</span>
@@ -159,9 +143,23 @@
 
     <!-- NAVBAR 3.CHAPTER MENU, BASKET -->
     <div class="mx-auto py-2 text-sm">
-      <div class="flex flex-col lg:flex-row justify-between items-center border-b w-9/12 mx-auto">
+      <div class="flex lg:flex-row justify-between items-center border-b w-9/12 mx-auto">
+
+        <!-- Dropdown Menu for Mobile -->
+        <div class="relative lg:hidden dropdown">
+          <i class="fa-solid fa-bars fa-3x mx-3 my-3" style="color: #e650b4;"></i>
+          <div class="dropdown-menu absolute hidden hover:block bg-white shadow-md border z-10">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">CATEGORIES</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">MEGAMENU</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">MULTILEVEL</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">BRANDS</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-pink-500">SPECIAL</a>
+            <!-- More submenu items -->
+          </div>
+        </div>
+
         <!-- Categories Menu -->
-        <div class="lg:flex-grow-0 flex py-2">
+        <div class="g:flex-grow-0 flex hidden lg:flex">
           <div class="relative dropdown">
             <button class="py-2 font-semibold hover:text-gray-400 focus:outline-none">
               CATEGORIES
@@ -253,10 +251,10 @@
     <div id="slider" class="relative h-96 overflow-hidden">
       <div class="slide absolute inset-0 bg-center bg-cover transition-opacity opacity-0"
         style="background-image: url('./assets/images/1.jpg')">
-        <div class="absolute space-x-48 top-3/4 transform -translate-y-1/2 w-9/12 px-2 text-white">
+        <div class="absolute lg:space-x-48 top-3/4 transform -translate-y-1/2 translate-x-1/4 w-9/12 text-white block">
           <div class="absolute inset-0 bg-black opacity-10"></div>
-          <h1 class="text-5xl text-pink-500 font-bold py-2">Sugar Office</h1>
-          <p class="text-2xl text-pink-300 font-semibold py-2">
+          <h1 class="text-xl lg:text-5xl text-pink-500 font-bold py-2">Sugar Office</h1>
+          <p class="lg:text-2xl text-sm text-pink-300 font-semibold py-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptatum.
           </p>
@@ -268,10 +266,10 @@
       </div>
       <div class="slide absolute inset-0 bg-center bg-cover transition-opacity opacity-0"
         style="background-image: url('./assets/images/2.jpg')">
-        <div class="absolute space-x-48 top-3/4 transform -translate-y-1/2 w-9/12 px-2 text-white">
+        <div class="absolute lg:space-x-48 top-3/4 transform -translate-y-1/2 translate-x-1/4 w-9/12 text-white block">
           <div class="absolute inset-0 bg-black opacity-10"></div>
-          <h1 class="text-5xl text-pink-500 font-bold py-2">Sugar Office</h1>
-          <p class="text-2xl text-pink-300 font-semibold py-2">
+          <h1 class="text-xl lg:text-5xl text-pink-500 font-bold py-2">Sugar Office</h1>
+          <p class="lg:text-2xl text-sm text-pink-300 font-semibold py-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptatum.
           </p>
@@ -283,10 +281,10 @@
       </div>
       <div class="slide absolute inset-0 bg-center bg-cover transition-opacity opacity-0"
         style="background-image: url('./assets/images/3.jpg')">
-        <div class="absolute space-x-48 top-3/4 transform -translate-y-1/2 w-9/12 px-2 text-white">
+        <div class="absolute lg:space-x-48 top-3/4 transform -translate-y-1/2 translate-x-1/4 w-9/12 text-white block">
           <div class="absolute inset-0 bg-black opacity-10"></div>
-          <h1 class="text-5xl text-pink-500 font-bold py-2">Sugar Office</h1>
-          <p class="text-2xl text-pink-300 font-semibold py-2">
+          <h1 class="text-xl lg:text-5xl text-pink-500 font-bold py-2">Sugar Office</h1>
+          <p class="lg:text-2xl text-sm text-pink-300 font-semibold py-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptatum.
           </p>
@@ -316,7 +314,7 @@
       <div class="flex items-center justify-center h-full">
         <div class="w-9/12 flex flex-col items-center relative z-10">
           <h1 class="font-semibold text-4xl text-center text-white leading-tight uppercase">
-            end of season <span class="text-pink-700">sale</span>
+            end of season <span class="text-pink-500">sale</span>
           </h1>
           <p class="text-sm text-center text-white mt-2">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -336,7 +334,7 @@
     <!-- MODULE 6 -->
     <div class="bg-gray-500 py-4 w-full">
       <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-center items-center w-full sm:w-9/12">
-        
+
         <!-- Free Shipping -->
         <div class="flex items-center flex-row mb-4 sm:mb-0 w-full">
           <div class="flex items-center justify-center h-12 w-12 rounded-full bg-orange-500 mr-4">
@@ -347,7 +345,7 @@
             <p class="text-gray-400 text-xs">Free delivery over $100</p>
           </div>
         </div>
-    
+
         <!-- Free Returns -->
         <div class="flex items-center flex-row mb-4 sm:mb-0 w-full">
           <div class="flex items-center justify-center h-12 w-12 rounded-full bg-orange-500 mr-4">
@@ -358,7 +356,7 @@
             <p class="text-gray-400 text-xs">Hassle free returns</p>
           </div>
         </div>
-    
+
         <!-- Secure Shopping -->
         <div class="flex items-center flex-row mb-4 sm:mb-0 w-full">
           <div class="flex items-center justify-center h-12 w-12 rounded-full bg-orange-500 mr-4">
@@ -369,7 +367,7 @@
             <p class="text-gray-400 text-xs">Best security features</p>
           </div>
         </div>
-    
+
         <!-- Unlimited Blocks -->
         <div class="flex items-center flex-row mb-4 sm:mb-0 w-full">
           <div class="flex items-center justify-center h-12 w-12 rounded-full bg-orange-500 mr-4">
@@ -380,10 +378,10 @@
             <p class="text-gray-400 text-xs">Any content, any page</p>
           </div>
         </div>
-    
+
       </div>
     </div>
-    
+
 
     <br />
 

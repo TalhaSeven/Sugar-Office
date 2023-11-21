@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll("#slider .slide");
-  let currentSlide = 0;
+  let currentSlide = 1;
   function fadeToSlide(slideIndex) {
     slides[currentSlide].classList.add("opacity-0");
     slides[currentSlide].classList.remove("opacity-100");
@@ -19,5 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(() => {
     fadeToSlide(currentSlide + 1);
-  }, 6000);
+  }, 2000);
+});
+
+document.getElementById('menu-btn').addEventListener('click', function() {
+  var menu = document.getElementById('menu');
+  menu.classList.toggle('hidden');
 });
